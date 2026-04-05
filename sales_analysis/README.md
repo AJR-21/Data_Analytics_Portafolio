@@ -55,7 +55,5 @@ Note: The dataset was cleaned to fix inconsistencies and missing values.
 
 project/
 │── Dataset/
-    │── messy_data.csv/
-    │── clean_data.csv/
 │── Notebooks/
 │── README.md
