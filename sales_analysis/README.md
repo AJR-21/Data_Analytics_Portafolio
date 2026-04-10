@@ -7,6 +7,8 @@ This project focuses on cleaning and analyzing an e-commerce dataset, addressing
 - Clean and preprocess raw e-commerce data
 - Ensure consistency across transactions
 - Prepare the dataset for analysis and visualization
+- Make exploratory data analysis
+- Present visualizations.
 
 ## 📊 Dataset
 
@@ -44,6 +46,13 @@ Note: The dataset was cleaned to fix inconsistencies and missing values.
 - Missing quantity values with valid price were assumed as 1
 - Misising Price values was assumed as the mean price of the product
 - Product categories were standardized using the most frequent category per product
+
+## 💡Insights
+- The Home category is the most popular, while shoes and blender are the most popular products.
+- The most popular payment method among customers is cash on delivery.
+- Book category products generates the highest revenue, while electronics category represent a marginal proportion.
+- Regarding the product, shoes generates the highest revenue.
+- In 2024, the sales grew steadily. However, in 2025, sales fluctuated dramatically reaching their peack in October.
 
 ## 🛠 Tools & Technologies
 
