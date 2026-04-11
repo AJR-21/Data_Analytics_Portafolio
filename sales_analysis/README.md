@@ -47,6 +47,12 @@ Note: The dataset was cleaned to fix inconsistencies and missing values.
 - Misising Price values was assumed as the mean price of the product
 - Product categories were standardized using the most frequent category per product
 
+## 📊 Exploratory Data Analysis
+- Explore the shape, general information, and summary statistics of the dataset
+- Univarite analysis of quantitative columns
+- Binary analysis of numeric and categorical columns
+- Time series analysis of total sales
+
 ## 💡Insights
 - The Home category is the most popular, while shoes and blender are the most popular products.
 - The most popular payment method among customers is cash on delivery.
@@ -56,7 +62,7 @@ Note: The dataset was cleaned to fix inconsistencies and missing values.
 
 ## 🛠 Tools & Technologies
 
-- Python (Pandas, NumPy)
+- Python (Pandas, Numpy)
 - Jupyter Notebook
 - Git & GitHub
 

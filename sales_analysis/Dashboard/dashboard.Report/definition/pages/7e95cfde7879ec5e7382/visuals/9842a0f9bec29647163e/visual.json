@@ -1,0 +1,139 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "9842a0f9bec29647163e",
+  "position": {
+    "x": 576,
+    "y": 80,
+    "z": 1,
+    "height": 304,
+    "width": 704,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "hundredPercentStackedColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "clean_data"
+                    }
+                  },
+                  "Property": "Payment_Method"
+                }
+              },
+              "queryRef": "clean_data.Payment_Method",
+              "nativeQueryRef": "Payment_Method",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "clean_data"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "clean_data.Status",
+              "nativeQueryRef": "Status"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_measure"
+                    }
+                  },
+                  "Property": "N° Orders"
+                }
+              },
+              "queryRef": "_measure.N° Orders",
+              "nativeQueryRef": "N° Orders"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_measure"
+                  }
+                },
+                "Property": "N° Orders"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "22e765ff6c36f584f960",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "clean_data"
+              }
+            },
+            "Property": "Payment_Method"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c1456c92fcec8cad8133",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_measure"
+              }
+            },
+            "Property": "N° Orders"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "107d8412d953cd1f1b48",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "clean_data"
+              }
+            },
+            "Property": "Status"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "87e9d566437976e7a2a3",
+  "position": {
+    "x": 0,
+    "y": 432,
+    "z": 9,
+    "height": 144,
+    "width": 176,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "clean_data"
+                    }
+                  },
+                  "Property": "Payment_Method"
+                }
+              },
+              "queryRef": "clean_data.Payment_Method",
+              "nativeQueryRef": "Payment_Method",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "76c2eca0a4eea04088a3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "clean_data"
+              }
+            },
+            "Property": "Payment_Method"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

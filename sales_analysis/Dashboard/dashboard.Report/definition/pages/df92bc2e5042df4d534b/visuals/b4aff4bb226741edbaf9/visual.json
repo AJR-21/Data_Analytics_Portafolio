@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "b4aff4bb226741edbaf9",
+  "position": {
+    "x": 223.99999999999997,
+    "y": 544,
+    "z": 6,
+    "height": 176,
+    "width": 608,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "pieChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "clean_data"
+                    }
+                  },
+                  "Property": "Payment_Method"
+                }
+              },
+              "queryRef": "clean_data.Payment_Method",
+              "nativeQueryRef": "Payment_Method",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_measure"
+                    }
+                  },
+                  "Property": "Total revenue"
+                }
+              },
+              "queryRef": "_measure.Total revenue",
+              "nativeQueryRef": "Total revenue"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_measure"
+                  }
+                },
+                "Property": "Total revenue"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2c9a7c9559a339a7d477",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "clean_data"
+              }
+            },
+            "Property": "Payment_Method"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a5c7eab131aa3b1a996b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_measure"
+              }
+            },
+            "Property": "Total revenue"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

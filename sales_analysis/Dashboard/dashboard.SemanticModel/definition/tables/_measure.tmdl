@@ -1,0 +1,74 @@
+table _measure
+	lineageTag: 52695118-f491-462f-9d71-449f5a9106a3
+
+	measure 'N° Orders' = COUNT(clean_data[Order_ID])
+		formatString: 0
+		lineageTag: 9308c125-c075-411a-a8a7-a4b68c989ae5
+
+	measure 'Cantidad de productos' = SUM(clean_data[Quantity])
+		formatString: 0
+		lineageTag: 6d3c1054-de2d-43df-bd1e-5e29498f68e1
+
+	measure 'Total revenue' = SUM(clean_data[Revenue])
+		lineageTag: 130e6967-f10b-43e2-9794-560ffc24abda
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg order value' = DIVIDE([Total revenue], [N° Orders])
+		lineageTag: 05484c06-83c0-4605-ab1b-9e1cdf730f24
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Ranking =
+			RANKX(
+			    ALL(clean_data[Product]),
+			    [Total revenue],
+			    ,
+			    DESC
+			)
+		formatString: 0
+		lineageTag: cacfab25-aedb-4df2-bd22-5b288158e85f
+
+	measure 'Cumulative revenue' =
+			
+			
+			VAR last_rank = MAXx(VALUES(clean_data[Product]),[Ranking])
+			
+			RETURN
+			CALCULATE(
+			    [Total revenue],
+			    FILTER(ALL(clean_data[Product]), [Ranking] <= last_rank)
+			)
+		lineageTag: c3642807-6308-4718-8103-42a5b990f398
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% cumulative' = DIVIDE([Cumulative revenue], CALCULATE([Total revenue], ALL(clean_data)))
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 9515c0a4-f035-41a4-bbeb-e485ff995517
+
+	measure '80% pareto' = 0.8
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: ef066983-9d4a-4744-bf2e-4b94d31b7518
+
+	measure '% Participation' = DIVIDE([Total revenue], CALCULATE([Total revenue], ALL(clean_data)))
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 8df336f0-e3d5-42a8-bcca-20653e3b8f88
+
+	column Column
+		formatString: 0
+		lineageTag: 9ce9af65-ac3b-4fd5-9067-2fc77ef00040
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _measure = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = a847c1ec84ec4129bf010f5bd1e2a7a3
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

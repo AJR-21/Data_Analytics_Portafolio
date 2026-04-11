@@ -1,0 +1,126 @@
+table clean_data
+	lineageTag: b5357913-c66a-490c-940f-643d8ee36893
+
+	column ID
+		dataType: string
+		lineageTag: 8456b0ed-3e88-4270-8672-6e4493e37965
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer_Name
+		dataType: string
+		lineageTag: ca0a5679-2cdb-4ac6-8072-1c15524fdefc
+		summarizeBy: none
+		sourceColumn: Customer_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order_ID
+		dataType: string
+		lineageTag: 479834a1-1158-4e88-89a7-cd5b56b693fd
+		summarizeBy: none
+		sourceColumn: Order_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order_Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1fc09b20-3c14-433c-b324-a43ec2d7f7b6
+		summarizeBy: none
+		sourceColumn: Order_Date
+
+		variation Variación
+			isDefault
+			relationship: 222e5ff6-fe89-4b84-9a6e-11fddd3c22d0
+			defaultHierarchy: LocalDateTable_b2c3c491-6ba8-4ec6-b9c4-89dc9e3224fd.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Product
+		dataType: string
+		lineageTag: 327ff174-541b-42ef-a3e2-8adf8068aa63
+		summarizeBy: none
+		sourceColumn: Product
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 7ab82044-cd59-4374-96fd-b2f840edd0ac
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: b9fe55bc-2d3b-44fc-b0f4-83e88d6d2558
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: double
+		formatString: 0
+		lineageTag: 40a2dad2-df5c-47e2-b579-184e3ee3a755
+		summarizeBy: sum
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column Payment_Method
+		dataType: string
+		lineageTag: 866571cd-008a-4c9a-96f6-b7ef114f7ab5
+		summarizeBy: none
+		sourceColumn: Payment_Method
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 98c01247-2abf-42a1-8ee7-de15f9378ebf
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Revenue
+		dataType: double
+		lineageTag: 38828e3e-1494-43a0-ac63-6f739f88b695
+		summarizeBy: sum
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition clean_data = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\Usuario\Desktop\2026\Sales_analysis_ecommerce\sales_analysis\Dataset\clean_data.csv"),[Delimiter=",", Columns=11, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID", Int64.Type}, {"Customer_Name", type text}, {"Order_ID", type text}, {"Order_Date", type date}, {"Product", type text}, {"Category", type text}, {"Quantity", Int64.Type}, {"Price", Int64.Type}, {"Payment_Method", type text}, {"Status", type text}, {"Total", Int64.Type}}),
+				    #"Duplicados quitados" = Table.Distinct(#"Tipo cambiado"),
+				    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Duplicados quitados",{{"ID", type text}}),
+				    #"División insertada" = Table.AddColumn(#"Tipo cambiado1", "División", each [Price] / 100, type number),
+				    #"Columna dividida" = Table.TransformColumns(#"División insertada", {{"Price", each _ / 100, type number}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Columna dividida",{"División"}),
+				    #"Columna dividida1" = Table.TransformColumns(#"Columnas quitadas", {{"Total", each _ / 100, type number}}),
+				    #"Personalizada agregada" = Table.AddColumn(#"Columna dividida1", "Revenue", each [Quantity]*[Price]),
+				    #"Columnas quitadas1" = Table.RemoveColumns(#"Personalizada agregada",{"Total"}),
+				    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Columnas quitadas1",{{"Revenue", type number}})
+				in
+				    #"Tipo cambiado2"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

@@ -1,0 +1,246 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "92f802492a1ac106d3e3",
+  "position": {
+    "x": 576,
+    "y": 384,
+    "z": 2,
+    "height": 336,
+    "width": 704,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "clean_data"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "Order_Date"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Año"
+                }
+              },
+              "queryRef": "clean_data.Order_Date.Variación.Jerarquía de fechas.Año",
+              "nativeQueryRef": "Order_Date Año",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "clean_data"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "Order_Date"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Trimestre"
+                }
+              },
+              "queryRef": "clean_data.Order_Date.Variación.Jerarquía de fechas.Trimestre",
+              "nativeQueryRef": "Order_Date Trimestre",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "clean_data"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "Order_Date"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Mes"
+                }
+              },
+              "queryRef": "clean_data.Order_Date.Variación.Jerarquía de fechas.Mes",
+              "nativeQueryRef": "Order_Date Mes",
+              "active": false
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "clean_data"
+                    }
+                  },
+                  "Property": "Status"
+                }
+              },
+              "queryRef": "clean_data.Status",
+              "nativeQueryRef": "Status"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_measure"
+                    }
+                  },
+                  "Property": "N° Orders"
+                }
+              },
+              "queryRef": "_measure.N° Orders",
+              "nativeQueryRef": "N° Pedidos",
+              "displayName": "N° Pedidos"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5e2deb99489f8772b961",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "clean_data"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Order_Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Año"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d7cfbf9e1e50934a8390",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "clean_data"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Order_Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Trimestre"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c1d1ea8892919c9a94bb",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "clean_data"
+                      }
+                    },
+                    "Name": "Variación",
+                    "Property": "Order_Date"
+                  }
+                },
+                "Hierarchy": "Jerarquía de fechas"
+              }
+            },
+            "Level": "Mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0106920d56e1e272f7ee",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_measure"
+              }
+            },
+            "Property": "N° Orders"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "aacb9bb8b7bdcdc144d2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "clean_data"
+              }
+            },
+            "Property": "Status"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
