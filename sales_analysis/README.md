@@ -56,14 +56,17 @@ Note: The dataset was cleaned to fix inconsistencies and missing values.
 ## 💡Insights
 - The Home category is the most popular, while shoes and blender are the most popular products.
 - The most popular payment method among customers is cash on delivery.
-- Book category products generates the highest revenue, while electronics category represent a marginal proportion.
-- Regarding the product, shoes generates the highest revenue.
-- In 2024, the sales grew steadily. However, in 2025, sales fluctuated dramatically reaching their peack in October.
+- Books category products generates the highest revenue, while electronics category represent a marginal proportion.
+- Regarding the products, comics generates the highest revenue.
+- Months with the high revenue were in February, June, and October.
+- 50% of the products generates the 80% of the revenue.
+- The number of products renturned and cancelled have increased significantly in 2025.
 
 ## 🛠 Tools & Technologies
 
 - Python (Pandas, Numpy)
 - Jupyter Notebook
+- Power BI
 - Git & GitHub
 
 ## 📂 Project Structure

@@ -1601,16 +1601,6 @@ cultureInfo es-PE
 			            },
 			            "Weight": 0.492
 			          }
-			        },
-			        {
-			          "N° Pedidos": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -1626,6 +1616,16 @@ cultureInfo es-PE
 			        {
 			          "cantidad de productos": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "N° Products": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]

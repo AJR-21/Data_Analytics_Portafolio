@@ -3,11 +3,11 @@
   "name": "92f802492a1ac106d3e3",
   "position": {
     "x": 576,
-    "y": 384,
-    "z": 2,
-    "height": 336,
-    "width": 704,
-    "tabOrder": 2
+    "y": 416,
+    "z": 2000,
+    "height": 288,
+    "width": 688,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineChart",
@@ -127,120 +127,66 @@
                 }
               },
               "queryRef": "_measure.N° Orders",
-              "nativeQueryRef": "N° Pedidos",
-              "displayName": "N° Pedidos"
+              "nativeQueryRef": "N° Orders",
+              "displayName": "N° Orders"
             }
           ]
         }
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'N° Orders by Año and Status'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#132a13'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5e2deb99489f8772b961",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "clean_data"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Order_Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d7cfbf9e1e50934a8390",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "clean_data"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Order_Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Trimestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c1d1ea8892919c9a94bb",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "clean_data"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "Order_Date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "0106920d56e1e272f7ee",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_measure"
-              }
-            },
-            "Property": "N° Orders"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "aacb9bb8b7bdcdc144d2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "clean_data"
-              }
-            },
-            "Property": "Status"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

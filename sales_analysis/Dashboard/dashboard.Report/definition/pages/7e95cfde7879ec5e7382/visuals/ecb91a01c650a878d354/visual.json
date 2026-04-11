@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "ecb91a01c650a878d354",
   "position": {
-    "x": 32,
-    "y": 112,
+    "x": 16,
+    "y": 96,
     "z": 0,
-    "height": 592,
+    "height": 608,
     "width": 512,
     "tabOrder": 0
   },
@@ -46,8 +46,8 @@
                 }
               },
               "queryRef": "_measure.N° Orders",
-              "nativeQueryRef": "N° Pedidos",
-              "displayName": "N° Pedidos"
+              "nativeQueryRef": "N° Orders",
+              "displayName": "N° Orders"
             }
           ]
         }
@@ -70,38 +70,59 @@
         ]
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'N° Orders by Status'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#132a13'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "4619755bce948c46c882",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "clean_data"
-              }
-            },
-            "Property": "Status"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6bc94f7cdf60db7a10df",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_measure"
-              }
-            },
-            "Property": "N° Orders"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

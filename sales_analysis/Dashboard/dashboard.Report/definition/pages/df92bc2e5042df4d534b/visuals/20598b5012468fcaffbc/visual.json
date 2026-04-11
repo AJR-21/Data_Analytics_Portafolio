@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "20598b5012468fcaffbc",
   "position": {
-    "x": 992.00000000000011,
-    "y": 96,
-    "z": 5,
+    "x": 999.47506561679791,
+    "y": 92.388451443569537,
+    "z": 6000,
     "height": 96,
-    "width": 288,
-    "tabOrder": 5
+    "width": 256,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "card",
@@ -61,29 +61,55 @@
                   "Value": "1D"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#CCFF33'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#132A13'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "482446326ddc7af4baea",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_measure"
-              }
-            },
-            "Property": "Avg order value"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "b4aff4bb226741edbaf9",
   "position": {
-    "x": 223.99999999999997,
+    "x": 192,
     "y": 544,
-    "z": 6,
+    "z": 7000,
     "height": 176,
-    "width": 608,
-    "tabOrder": 6
+    "width": 592,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "pieChart",
@@ -70,38 +70,59 @@
         "isDefaultSort": true
       }
     },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total revenue by Payment Method'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#132A13'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2c9a7c9559a339a7d477",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "clean_data"
-              }
-            },
-            "Property": "Payment_Method"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a5c7eab131aa3b1a996b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_measure"
-              }
-            },
-            "Property": "Total revenue"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -3,11 +3,11 @@
   "name": "87e9d566437976e7a2a3",
   "position": {
     "x": 0,
-    "y": 432,
-    "z": 9,
-    "height": 144,
+    "y": 447.99999999999994,
+    "z": 10000,
+    "height": 176,
     "width": 176,
-    "tabOrder": 9
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "clean_data.Payment_Method",
-              "nativeQueryRef": "Payment_Method",
-              "active": true
+              "nativeQueryRef": "Payment Method",
+              "active": true,
+              "displayName": "Payment Method"
             }
           ]
         }
@@ -52,26 +53,45 @@
         {
           "properties": {}
         }
+      ],
+      "items": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D9ED92'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "pendingChangesIcon": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualHeader": [
+        {
+          "properties": {}
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "76c2eca0a4eea04088a3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "clean_data"
-              }
-            },
-            "Property": "Payment_Method"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

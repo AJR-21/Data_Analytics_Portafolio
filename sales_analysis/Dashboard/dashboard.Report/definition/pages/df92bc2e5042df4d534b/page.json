@@ -4,5 +4,37 @@
   "displayName": "Overview",
   "displayOption": "FitToPage",
   "height": 720,
-  "width": 1280
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 0,
+                    "Percent": -0.5
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "7c088fb6fdcceae696c1",
+      "target": "b4aff4bb226741edbaf9",
+      "type": "DataFilter"
+    },
+    {
+      "source": "b4aff4bb226741edbaf9",
+      "target": "7c088fb6fdcceae696c1",
+      "type": "DataFilter"
+    }
+  ]
 }

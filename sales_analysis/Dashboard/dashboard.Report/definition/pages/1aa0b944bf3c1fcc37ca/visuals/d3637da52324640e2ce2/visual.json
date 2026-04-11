@@ -3,11 +3,11 @@
   "name": "d3637da52324640e2ce2",
   "position": {
     "x": 688,
-    "y": 80,
-    "z": 2,
-    "height": 336,
+    "y": 96,
+    "z": 1000,
+    "height": 304,
     "width": 592,
-    "tabOrder": 2
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "treemap",
@@ -85,6 +85,37 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#132a13'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -196,20 +227,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "63a949a5b4a446d0606a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_measure"
-              }
-            },
-            "Property": "Total revenue"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

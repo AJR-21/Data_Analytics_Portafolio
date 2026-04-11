@@ -1,0 +1,108 @@
+{
+  "name": "Custom",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#132A13"
+              }
+            }
+          }
+        ],
+        "visualTooltip": [
+          {
+            "themedValueFontColor": {
+              "solid": {
+                "color": "#282828"
+              }
+            }
+          }
+        ],
+        "visualHeaderTooltip": [
+          {}
+        ],
+        "outspacePane": [
+          {
+            "foregroundColor": {
+              "solid": {
+                "color": "#040403"
+              }
+            }
+          }
+        ],
+        "filterCard": [
+          {
+            "$id": "Available",
+            "foregroundColor": {
+              "solid": {
+                "color": "#040403"
+              }
+            }
+          },
+          {
+            "$id": "Applied",
+            "foregroundColor": {
+              "solid": {
+                "color": "#070707"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#9B9595"
+              }
+            },
+            "transparency": 100
+          }
+        ],
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F9F5F5"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "textClasses": {
+    "label": {
+      "color": "#70E000",
+      "fontSize": 12
+    },
+    "callout": {
+      "color": "#70E000",
+      "fontSize": 24
+    },
+    "title": {
+      "color": "#70E000",
+      "fontSize": 16
+    },
+    "header": {
+      "color": "#70E000"
+    }
+  },
+  "dataColors": [
+    "#CCFF33",
+    "#70E000",
+    "#38B000",
+    "#007200",
+    "#52B69A",
+    "#168AAD",
+    "#D9B300",
+    "#D64550"
+  ],
+  "foregroundNeutralSecondary": "#D9ED92"
+}

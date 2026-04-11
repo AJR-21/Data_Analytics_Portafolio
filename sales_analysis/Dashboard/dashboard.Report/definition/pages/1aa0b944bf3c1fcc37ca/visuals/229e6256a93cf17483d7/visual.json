@@ -3,11 +3,11 @@
   "name": "229e6256a93cf17483d7",
   "position": {
     "x": 0,
-    "y": 80,
-    "z": 3,
-    "height": 384,
+    "y": 96,
+    "z": 2000,
+    "height": 368,
     "width": 672,
-    "tabOrder": 3
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -162,6 +162,24 @@
           "selector": {
             "metadata": "_measure.80% pareto"
           }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#132a13'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_measure.% cumulative"
+          }
         }
       ],
       "lineStyles": [
@@ -193,6 +211,44 @@
             "metadata": "_measure.80% pareto"
           }
         }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#00A896'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_measure.% cumulative"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#D90429'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_measure.80% pareto"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -202,7 +258,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Diagrama de Pareto'"
+                  "Value": "' Pareto Diagram of Revenue by Products'"
                 }
               }
             },
@@ -215,68 +271,39 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#132a13'"
+                    }
+                  }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "705afc1a90b617e58d9f",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "clean_data"
-              }
-            },
-            "Property": "Product"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "12a5de7482ccc6f820e6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_measure"
-              }
-            },
-            "Property": "Total revenue"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "48d80392925de4e5e362",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_measure"
-              }
-            },
-            "Property": "% cumulative"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0e45b20a962b52dba02c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_measure"
-              }
-            },
-            "Property": "80% pareto"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
