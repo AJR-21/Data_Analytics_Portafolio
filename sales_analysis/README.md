@@ -72,6 +72,7 @@ Note: The dataset was cleaned to fix inconsistencies and missing values.
 ## 📂 Project Structure
 
 project/
+|── Dashboard/
 │── Dataset/
 │── Notebooks/
 │── README.md
