@@ -49,7 +49,7 @@ mapping_frequency = {
     'Fortnightly': 14,
     'Weekly': 7,
     'Monthly': 30,
-    'Quaterly': 90,
+    'Quarterly': 90,
     'Annually': 365,
     'Bi-Weekly': 14,
     'Every 3 Months': 90

@@ -53,6 +53,15 @@ Note: The dataset was cleaned to fix inconsistencies and missing values.
 - Binary analysis of numeric and categorical columns
 - Time series analysis of total sales
 
+## 📷 Dashboard Preview
+
+## Overview Dashboard
+![Overview Dashboard](Dashboard/images/overview.png)
+
+## Sales Analysis Dashboard
+![Sales Analysis Dashboard](Dashboard/images/sales.png)
+
+
 ## 💡Insights
 - The Home category is the most popular, while shoes and blender are the most popular products.
 - The most popular payment method among customers is cash on delivery.
