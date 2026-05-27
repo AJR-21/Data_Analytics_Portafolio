@@ -28,7 +28,7 @@ The goal of this project is to identify:
 | 🐼 Pandas | Data transformation |
 | 📈 Matplotlib / Seaborn | Visual exploration |
 | 🗄️ PostgreSQL | Business queries & analysis |
-| 📊 Power BI / Tableau | Dashboard development |
+| 📊 Power BI | Dashboard development |
 | 💻 SQL | Business problem solving |
 
 ---
